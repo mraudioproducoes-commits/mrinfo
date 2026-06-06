@@ -52,15 +52,291 @@ const HomePage = () => {
     'Uso comercial permitido'
   ];
 
-  // Complete VS Pagode song list organized by artist/group
   const vsPagodeSongs = [
-    { artist: 'FERRUGEM', category: 'FERRUGEM', title: 'Ferrugem – Até Que Enfim' },
-    { artist: 'FERRUGEM', category: 'FERRUGEM', title: 'Ferrugem – Atrasadinha' },
-    { artist: 'DILSINHO', category: 'DILSINHO', title: 'Dilsinho 12 Horas' },
-    { artist: 'THIAGUINHO', category: 'THIAGUINHO', title: 'Thiaguinho A Fila Anda' },
-    { artist: 'TURMA DO PAGODE', category: 'TURMA DO PAGODE', title: 'Turma Do Pagode A Pessoa Certa' },
-    { artist: 'SORRISO MAROTO', category: 'SORRISO MAROTO', title: 'Sorriso Maroto 50 Vezes' }
-    // ... truncated for brevity, assuming full list is still requested, we keep the original large array logic
+    // MEDLEY
+    { artist: 'MEDLEY', category: 'MEDLEY', title: 'Adivinha · Fatalmente · Quando a Gente Ama' },
+    { artist: 'MEDLEY', category: 'MEDLEY', title: '40 Graus · Gamei · Azul Sem Fim · Até o Sol Quis Ver · A Carta' },
+    { artist: 'MEDLEY', category: 'MEDLEY', title: 'A Gente Tudo a Ver · Camisa 10' },
+    { artist: 'MEDLEY', category: 'MEDLEY', title: 'Absoluta · É Tarde Demais' },
+    { artist: 'MEDLEY', category: 'MEDLEY', title: 'Agamamou · Gostava Tanto de Você · Descobridor dos Sete Mares' },
+    { artist: 'MEDLEY', category: 'MEDLEY', title: 'Ainda Gosto de Você · Coração Deserto · Me Espera' },
+    { artist: 'MEDLEY', category: 'MEDLEY', title: 'Assim Você Mata o Papai · Climatizar · Para com Esse Papo' },
+    { artist: 'MEDLEY', category: 'MEDLEY', title: 'Bom Bocado · Pimpolho · Fricote' },
+    { artist: 'MEDLEY', category: 'MEDLEY', title: 'Bombocado · Pimpolho · Fricote 2' },
+    { artist: 'MEDLEY', category: 'MEDLEY', title: 'Bye Bye · Sorria' },
+    { artist: 'MEDLEY', category: 'MEDLEY', title: 'Coincidência · Deixa Eu Te Querer' },
+    { artist: 'MEDLEY', category: 'MEDLEY', title: 'Combinado · Pura Adrenalina · Vício' },
+    { artist: 'MEDLEY', category: 'MEDLEY', title: 'Conselho · Insensato Destino · Coisa de Pele · O Show Tem que Continuar' },
+    { artist: 'MEDLEY', category: 'MEDLEY', title: 'Deixa Acontecer · Tchau e Bença · Brilho de Cristal · Me Faz Feliz' },
+    { artist: 'MEDLEY', category: 'MEDLEY', title: 'Deixa Acontecer · Tchau e Bença · Brilho de Cristal · Na Cama' },
+    { artist: 'MEDLEY', category: 'MEDLEY', title: 'Deixa em Off · Vamo que Vamo' },
+    { artist: 'MEDLEY', category: 'MEDLEY', title: 'É Bom Demais · Out Door' },
+    { artist: 'MEDLEY', category: 'MEDLEY', title: 'É Bom Demais · Out Door · Cheia de Manias' },
+    { artist: 'MEDLEY', category: 'MEDLEY', title: 'Especial Pixote · Idem · Frenesi · Nuance' },
+    { artist: 'MEDLEY', category: 'MEDLEY', title: 'Especial Raça Negra' },
+    { artist: 'MEDLEY', category: 'MEDLEY', title: 'Especial SPC' },
+    { artist: 'MEDLEY', category: 'MEDLEY', title: 'Eu Juro · Minha Namorada' },
+    { artist: 'MEDLEY', category: 'MEDLEY', title: 'Faz Assim · A Primeira Namorada · Amanhã' },
+    { artist: 'MEDLEY', category: 'MEDLEY', title: 'Ferrugem' },
+    { artist: 'MEDLEY', category: 'MEDLEY', title: 'Hoje a Noite É Nossa · Me Faz Feliz · Jeito Moleque' },
+    { artist: 'MEDLEY', category: 'MEDLEY', title: 'Lancinho · Sou o Cara pra Você · Ousadia e Alegria' },
+    { artist: 'MEDLEY', category: 'MEDLEY', title: 'Mais que Amigo · Nuance · Acordar com Você' },
+    { artist: 'MEDLEY', category: 'MEDLEY', title: 'Maravilha · Te Amar · Me Faz Feliz' },
+    { artist: 'MEDLEY', category: 'MEDLEY', title: 'Mineirinho · Sai da Minha Aba 2 Top' },
+    { artist: 'MEDLEY', category: 'MEDLEY', title: 'Mineirinho · Sai da Minha Aba' },
+    { artist: 'MEDLEY', category: 'MEDLEY', title: 'Não Pedi pra Me Apaixonar · Toda Noite' },
+    { artist: 'MEDLEY', category: 'MEDLEY', title: 'Notificação Preferida · Atrasadinha' },
+    { artist: 'MEDLEY', category: 'MEDLEY', title: 'Papo Reto · Uma Brasileira · Reggae Power' },
+    { artist: 'MEDLEY', category: 'MEDLEY', title: 'Pé na Areia · Meu Jeito Moleque' },
+    { artist: 'MEDLEY', category: 'MEDLEY', title: 'Pente e Rala · Instigante e Climatizar (violão)' },
+    { artist: 'MEDLEY', category: 'MEDLEY', title: 'Perfume · Intriga da Oposição · Desse Jeito É Ruim pra Mim · Belo' },
+    { artist: 'MEDLEY', category: 'MEDLEY', title: 'Pirata e Tesouro · Anti Amor' },
+    { artist: 'MEDLEY', category: 'MEDLEY', title: 'Porradão · Beija Aqui · Puxa Agarra e Beija' },
+    { artist: 'MEDLEY', category: 'MEDLEY', title: 'Que Situação · Pela Vida Inteira' },
+    { artist: 'MEDLEY', category: 'MEDLEY', title: 'Que Situação · Vergonha na Cara · Bye Bye Inimigos · Tô Te Filmando' },
+    { artist: 'MEDLEY', category: 'MEDLEY', title: 'Que Sorte a Nossa · Medo Bobo' },
+    { artist: 'MEDLEY', category: 'MEDLEY', title: 'Samba Diferente · Vassoura · Baile do Negro' },
+    { artist: 'MEDLEY', category: 'MEDLEY', title: 'Samba Diferente · Molejão' },
+    { artist: 'MEDLEY', category: 'MEDLEY', title: 'Segue Sua Vida · Paixão Verdadeira · TDP' },
+    { artist: 'MEDLEY', category: 'MEDLEY', title: 'Tá Louco Heim Filha · Curtindo a Vida' },
+    { artist: 'MEDLEY', category: 'MEDLEY', title: 'Tchau e Bênção · Falando Segredo · Na Cama' },
+    { artist: 'MEDLEY', category: 'MEDLEY', title: 'Te Amar Sem Medo · Meu Jeito de Ser · Alexandre Pires' },
+    { artist: 'MEDLEY', category: 'MEDLEY', title: 'Temporal · Mina de Fé' },
+    { artist: 'MEDLEY', category: 'MEDLEY', title: 'Valeu · Fui · Calma Amor · Exaltasamba (FVC)' },
+    { artist: 'MEDLEY', category: 'MEDLEY', title: 'Valeu · Livre pra Voar' },
+    // VERSÃO DE OUTROS ESTILOS
+    { artist: 'VERSÃO DE OUTROS ESTILOS', category: 'VERSÃO DE OUTROS ESTILOS', title: 'A Estrada' },
+    { artist: 'VERSÃO DE OUTROS ESTILOS', category: 'VERSÃO DE OUTROS ESTILOS', title: 'Burguesinha (Versão Pagode)' },
+    { artist: 'VERSÃO DE OUTROS ESTILOS', category: 'VERSÃO DE OUTROS ESTILOS', title: 'Ela É Demais' },
+    { artist: 'VERSÃO DE OUTROS ESTILOS', category: 'VERSÃO DE OUTROS ESTILOS', title: 'Evidências (Versão Pagode)' },
+    { artist: 'VERSÃO DE OUTROS ESTILOS', category: 'VERSÃO DE OUTROS ESTILOS', title: 'Gostava Tanto de Você' },
+    { artist: 'VERSÃO DE OUTROS ESTILOS', category: 'VERSÃO DE OUTROS ESTILOS', title: 'Jennifer (Versão Pagode)' },
+    { artist: 'VERSÃO DE OUTROS ESTILOS', category: 'VERSÃO DE OUTROS ESTILOS', title: 'Libera Ela (Versão Pagode)' },
+    { artist: 'VERSÃO DE OUTROS ESTILOS', category: 'VERSÃO DE OUTROS ESTILOS', title: 'Mal Acostumado' },
+    { artist: 'VERSÃO DE OUTROS ESTILOS', category: 'VERSÃO DE OUTROS ESTILOS', title: 'Marcas do Que Se Foi (Samba)' },
+    { artist: 'VERSÃO DE OUTROS ESTILOS', category: 'VERSÃO DE OUTROS ESTILOS', title: 'Não Tô Valendo Nada (Versão Pagode)' },
+    { artist: 'VERSÃO DE OUTROS ESTILOS', category: 'VERSÃO DE OUTROS ESTILOS', title: 'Natiruts Reggae Power (Grupo do Bola)' },
+    { artist: 'VERSÃO DE OUTROS ESTILOS', category: 'VERSÃO DE OUTROS ESTILOS', title: 'Nocaute' },
+    { artist: 'VERSÃO DE OUTROS ESTILOS', category: 'VERSÃO DE OUTROS ESTILOS', title: 'Notificação Preferida (Versão Pagode)' },
+    { artist: 'VERSÃO DE OUTROS ESTILOS', category: 'VERSÃO DE OUTROS ESTILOS', title: 'O Sol (Versão Pagode)' },
+    { artist: 'VERSÃO DE OUTROS ESTILOS', category: 'VERSÃO DE OUTROS ESTILOS', title: 'Olha a Explosão (Versão Pagode)' },
+    { artist: 'VERSÃO DE OUTROS ESTILOS', category: 'VERSÃO DE OUTROS ESTILOS', title: 'Os Anjos Cantam (Versão Pagode)' },
+    { artist: 'VERSÃO DE OUTROS ESTILOS', category: 'VERSÃO DE OUTROS ESTILOS', title: 'Ouvi Dizer (Versão Pagode)' },
+    { artist: 'VERSÃO DE OUTROS ESTILOS', category: 'VERSÃO DE OUTROS ESTILOS', title: 'Papo Reto (Grupo do Bola)' },
+    { artist: 'VERSÃO DE OUTROS ESTILOS', category: 'VERSÃO DE OUTROS ESTILOS', title: 'Quem Pegou Pegou (Versão Pagode)' },
+    { artist: 'VERSÃO DE OUTROS ESTILOS', category: 'VERSÃO DE OUTROS ESTILOS', title: 'Reggae Power (Grupo do Bola)' },
+    { artist: 'VERSÃO DE OUTROS ESTILOS', category: 'VERSÃO DE OUTROS ESTILOS', title: 'Senhorita (Versão Pagode)' },
+    { artist: 'VERSÃO DE OUTROS ESTILOS', category: 'VERSÃO DE OUTROS ESTILOS', title: 'Status que Eu Não Queria' },
+    { artist: 'VERSÃO DE OUTROS ESTILOS', category: 'VERSÃO DE OUTROS ESTILOS', title: 'Uma Brasileira 1 Top' },
+    { artist: 'VERSÃO DE OUTROS ESTILOS', category: 'VERSÃO DE OUTROS ESTILOS', title: 'Uma Brasileira 2 (Grupo do Bola)' },
+    { artist: 'VERSÃO DE OUTROS ESTILOS', category: 'VERSÃO DE OUTROS ESTILOS', title: 'Vidinha de Balada (Versão Pagode)' },
+    { artist: 'VERSÃO DE OUTROS ESTILOS', category: 'VERSÃO DE OUTROS ESTILOS', title: 'Você Partiu Meu Coração' },
+    // ALEXANDRE PIRES
+    { artist: 'ALEXANDRE PIRES', category: 'ALEXANDRE PIRES', title: 'Domingo' },
+    { artist: 'ALEXANDRE PIRES', category: 'ALEXANDRE PIRES', title: 'Final Feliz' },
+    { artist: 'ALEXANDRE PIRES', category: 'ALEXANDRE PIRES', title: 'Que Se Chamar Amor' },
+    { artist: 'ALEXANDRE PIRES', category: 'ALEXANDRE PIRES', title: 'Você Virou Saudade' },
+    // ART POPULAR
+    { artist: 'ART POPULAR', category: 'ART POPULAR', title: 'Agamamou' },
+    { artist: 'ART POPULAR', category: 'ART POPULAR', title: 'Pimpolho' },
+    // ARLINDO CRUZ
+    { artist: 'ARLINDO CRUZ', category: 'ARLINDO CRUZ', title: 'O Meu Lugar' },
+    // ATITUDE 67
+    { artist: 'ATITUDE 67', category: 'ATITUDE 67', title: 'Cerveja de Garrafa' },
+    { artist: 'ATITUDE 67', category: 'ATITUDE 67', title: 'Saideira' },
+    // BELO
+    { artist: 'BELO', category: 'BELO', title: 'Medley Perfume · Intriga da Oposição · Desse Jeito É Ruim pra Mim' },
+    { artist: 'BELO', category: 'BELO', title: 'Para com Esse Papo' },
+    // BOKA LOKA
+    { artist: 'BOKA LOKA', category: 'BOKA LOKA', title: 'Duas Paixões' },
+    // BOM GOSTO
+    { artist: 'BOM GOSTO', category: 'BOM GOSTO', title: 'Brigar Não Tá com Nada' },
+    { artist: 'BOM GOSTO', category: 'BOM GOSTO', title: 'Curtindo a Vida' },
+    { artist: 'BOM GOSTO', category: 'BOM GOSTO', title: 'Patricinha do Olho Azul' },
+    // CLAREOU
+    { artist: 'CLAREOU', category: 'CLAREOU', title: 'Quando o Sol Nascer' },
+    // CLÁUDIA LEITTE
+    { artist: 'CLÁUDIA LEITTE', category: 'CLÁUDIA LEITTE', title: 'Cartório' },
+    // DDG
+    { artist: 'DDG', category: 'DDG', title: 'Trem das Onze' },
+    // DI PROPÓSITO
+    { artist: 'DI PROPÓSITO', category: 'DI PROPÓSITO', title: 'Manda Áudio' },
+    // DILSINHO
+    { artist: 'DILSINHO', category: 'DILSINHO', title: '12 Horas' },
+    { artist: 'DILSINHO', category: 'DILSINHO', title: 'A Vingança' },
+    { artist: 'DILSINHO', category: 'DILSINHO', title: 'Cansei de Farra' },
+    { artist: 'DILSINHO', category: 'DILSINHO', title: 'Controle Remoto' },
+    { artist: 'DILSINHO', category: 'DILSINHO', title: 'Da Pra Saber' },
+    { artist: 'DILSINHO', category: 'DILSINHO', title: 'Deixa pra Amanhã' },
+    { artist: 'DILSINHO', category: 'DILSINHO', title: 'Já que Você Não Me Quer Mais' },
+    { artist: 'DILSINHO', category: 'DILSINHO', title: 'Maluca Pirada' },
+    { artist: 'DILSINHO', category: 'DILSINHO', title: 'Onze e Pouquinho' },
+    { artist: 'DILSINHO', category: 'DILSINHO', title: 'Péssimo Negócio' },
+    { artist: 'DILSINHO', category: 'DILSINHO', title: 'Pouco a Pouco' },
+    { artist: 'DILSINHO', category: 'DILSINHO', title: 'Refém' },
+    { artist: 'DILSINHO', category: 'DILSINHO', title: 'Sogra' },
+    { artist: 'DILSINHO', category: 'DILSINHO', title: 'Trovão' },
+    // DIOGO NOGUEIRA
+    { artist: 'DIOGO NOGUEIRA', category: 'DIOGO NOGUEIRA', title: 'Clareou' },
+    { artist: 'DIOGO NOGUEIRA', category: 'DIOGO NOGUEIRA', title: 'Pé na Areia' },
+    // EXALTASAMBA
+    { artist: 'EXALTASAMBA', category: 'EXALTASAMBA', title: 'Livre pra Voar' },
+    // FALTA CLICK 85
+    { artist: 'FALTA CLICK 85', category: 'FALTA CLICK 85', title: 'Moleque Danado' },
+    // FELIPE ARAÚJO
+    { artist: 'FELIPE ARAÚJO', category: 'FELIPE ARAÚJO', title: 'Atrasadinha' },
+    // FERRUGEM
+    { artist: 'FERRUGEM', category: 'FERRUGEM', title: 'Até que Enfim' },
+    { artist: 'FERRUGEM', category: 'FERRUGEM', title: 'Chopp Garotinho' },
+    { artist: 'FERRUGEM', category: 'FERRUGEM', title: 'Climatizar' },
+    { artist: 'FERRUGEM', category: 'FERRUGEM', title: 'Distante do Seu Mundo' },
+    { artist: 'FERRUGEM', category: 'FERRUGEM', title: 'É Natural' },
+    { artist: 'FERRUGEM', category: 'FERRUGEM', title: 'Ensaboado' },
+    { artist: 'FERRUGEM', category: 'FERRUGEM', title: 'Eu Juro' },
+    { artist: 'FERRUGEM', category: 'FERRUGEM', title: 'Eu Sou Feliz Assim' },
+    { artist: 'FERRUGEM', category: 'FERRUGEM', title: 'Paciência' },
+    { artist: 'FERRUGEM', category: 'FERRUGEM', title: 'Pirata e Tesouro' },
+    { artist: 'FERRUGEM', category: 'FERRUGEM', title: 'Pra Você Acreditar' },
+    { artist: 'FERRUGEM', category: 'FERRUGEM', title: 'Sinto Sua Falta' },
+    { artist: 'FERRUGEM', category: 'FERRUGEM', title: 'Som do Tambor' },
+    { artist: 'FERRUGEM', category: 'FERRUGEM', title: 'Tá na Cara' },
+    { artist: 'FERRUGEM', category: 'FERRUGEM', title: 'Tentei Ser Incrível' },
+    // GRUPO PRA VALER
+    { artist: 'GRUPO PRA VALER', category: 'GRUPO PRA VALER', title: 'Novas Regras' },
+    // GRUPO SEM ABUSO
+    { artist: 'GRUPO SEM ABUSO', category: 'GRUPO SEM ABUSO', title: 'Você Vai Lembrar de Mim' },
+    // GUGA NANDES
+    { artist: 'GUGA NANDES', category: 'GUGA NANDES', title: 'Presentinho' },
+    // IMAGINASAMBA
+    { artist: 'IMAGINASAMBA', category: 'IMAGINASAMBA', title: 'Pretexto' },
+    { artist: 'IMAGINASAMBA', category: 'IMAGINASAMBA', title: 'Retrô' },
+    { artist: 'IMAGINASAMBA', category: 'IMAGINASAMBA', title: 'Seja Bem Vinda' },
+    // INIMIGOS DA HP
+    { artist: 'INIMIGOS DA HP / DO HP', category: 'INIMIGOS DA HP / DO HP', title: 'Toca um Samba Aí' },
+    { artist: 'INIMIGOS DA HP / DO HP', category: 'INIMIGOS DA HP / DO HP', title: 'Vergonha na Cara' },
+    // JEITO MOLEQUE
+    { artist: 'JEITO MOLEQUE', category: 'JEITO MOLEQUE', title: 'Amizade e Tudo' },
+    { artist: 'JEITO MOLEQUE', category: 'JEITO MOLEQUE', title: 'Amor Eterno' },
+    { artist: 'JEITO MOLEQUE', category: 'JEITO MOLEQUE', title: 'Me Faz Feliz' },
+    { artist: 'JEITO MOLEQUE', category: 'JEITO MOLEQUE', title: 'Meu Jeito Moleque de Ser' },
+    { artist: 'JEITO MOLEQUE', category: 'JEITO MOLEQUE', title: 'Não Tem pra Ninguém' },
+    // JORGE ARAGÃO
+    { artist: 'JORGE ARAGÃO', category: 'JORGE ARAGÃO', title: 'Álvara' },
+    // KATINGUELE
+    { artist: 'KATINGUELE', category: 'KATINGUELE', title: 'No Compasso do Criador' },
+    { artist: 'KATINGUELE', category: 'KATINGUELE', title: 'Recado a Minha Amada' },
+    // MEU ÉBANO
+    { artist: 'MEU ÉBANO', category: 'MEU ÉBANO', title: 'Meu Ébano' },
+    // MOLEJO
+    { artist: 'MOLEJO', category: 'MOLEJO', title: 'Cilada' },
+    { artist: 'MOLEJO', category: 'MOLEJO', title: 'Samba Rock do Molejão' },
+    // MUMUZINHO
+    { artist: 'MUMUZINHO', category: 'MUMUZINHO', title: 'Curto Circuito' },
+    { artist: 'MUMUZINHO', category: 'MUMUZINHO', title: 'Design' },
+    { artist: 'MUMUZINHO', category: 'MUMUZINHO', title: 'Estonteante' },
+    { artist: 'MUMUZINHO', category: 'MUMUZINHO', title: 'Eu Mereço Ser Feliz' },
+    { artist: 'MUMUZINHO', category: 'MUMUZINHO', title: 'Fulminante' },
+    { artist: 'MUMUZINHO', category: 'MUMUZINHO', title: 'Playlist' },
+    // NEGRITUDE JR
+    { artist: 'NEGRITUDE JR', category: 'NEGRITUDE JR', title: 'Beijo Geladinho' },
+    { artist: 'NEGRITUDE JR', category: 'NEGRITUDE JR', title: 'Conto de Fadas' },
+    { artist: 'NEGRITUDE JR', category: 'NEGRITUDE JR', title: 'Medley Beijo Geladinho · Cohab City' },
+    // OBA OBA SAMBA HOUSE
+    { artist: 'OBA OBA SAMBA HOUSE', category: 'OBA OBA SAMBA HOUSE', title: 'Pescador de Ilusões' },
+    { artist: 'OBA OBA SAMBA HOUSE', category: 'OBA OBA SAMBA HOUSE', title: 'Use Somebody' },
+    // OS TRAVESSOS
+    { artist: 'OS TRAVESSOS', category: 'OS TRAVESSOS', title: 'Dividido' },
+    { artist: 'OS TRAVESSOS', category: 'OS TRAVESSOS', title: 'Maravilha Te Amar' },
+    { artist: 'OS TRAVESSOS', category: 'OS TRAVESSOS', title: 'Um Dia pra Nós Dois' },
+    // PÉRICLES
+    { artist: 'PÉRICLES', category: 'PÉRICLES', title: 'Final de Tarde' },
+    { artist: 'PÉRICLES', category: 'PÉRICLES', title: 'Melhor Eu Ir' },
+    // PIXOTE
+    { artist: 'PIXOTE', category: 'PIXOTE', title: 'Insegurança' },
+    { artist: 'PIXOTE', category: 'PIXOTE', title: 'Nem de Graça' },
+    // POLLO
+    { artist: 'POLLO', category: 'POLLO', title: 'Solta na Noite (part. Sorriso Maroto)' },
+    // RAÇA NEGRA
+    { artist: 'RAÇA NEGRA', category: 'RAÇA NEGRA', title: 'Cheia de Manias' },
+    { artist: 'RAÇA NEGRA', category: 'RAÇA NEGRA', title: 'Cheia de Manias (versão Novela)' },
+    { artist: 'RAÇA NEGRA', category: 'RAÇA NEGRA', title: 'Ciúme de Você' },
+    { artist: 'RAÇA NEGRA', category: 'RAÇA NEGRA', title: 'Deus Me Livre' },
+    { artist: 'RAÇA NEGRA', category: 'RAÇA NEGRA', title: 'É Tarde Demais' },
+    // REVELAÇÃO
+    { artist: 'REVELAÇÃO', category: 'REVELAÇÃO', title: 'Agora Viu que Me Perdeu' },
+    { artist: 'REVELAÇÃO', category: 'REVELAÇÃO', title: 'Deixa Acontecer' },
+    { artist: 'REVELAÇÃO', category: 'REVELAÇÃO', title: 'Jogo da Sedução' },
+    { artist: 'REVELAÇÃO', category: 'REVELAÇÃO', title: 'Só Vai de Camarote' },
+    { artist: 'REVELAÇÃO', category: 'REVELAÇÃO', title: 'Tá Escrito' },
+    // RODRIGUINHO
+    { artist: 'RODRIGUINHO', category: 'RODRIGUINHO', title: 'Fatalmente' },
+    // SAMBO
+    { artist: 'SAMBO', category: 'SAMBO', title: 'Pais e Filhos' },
+    { artist: 'SAMBO', category: 'SAMBO', title: 'Sunday Bloody Sunday' },
+    // SORRISO MAROTO
+    { artist: 'SORRISO MAROTO', category: 'SORRISO MAROTO', title: '50 Vezes' },
+    { artist: 'SORRISO MAROTO', category: 'SORRISO MAROTO', title: 'Assim Você Mata o Papai' },
+    { artist: 'SORRISO MAROTO', category: 'SORRISO MAROTO', title: 'Chave e Cadeado' },
+    { artist: 'SORRISO MAROTO', category: 'SORRISO MAROTO', title: 'Conselho de Amigo' },
+    { artist: 'SORRISO MAROTO', category: 'SORRISO MAROTO', title: 'Dependente' },
+    { artist: 'SORRISO MAROTO', category: 'SORRISO MAROTO', title: 'Escondido dos Seus Pais' },
+    { artist: 'SORRISO MAROTO', category: 'SORRISO MAROTO', title: 'Instigante' },
+    { artist: 'SORRISO MAROTO', category: 'SORRISO MAROTO', title: 'Lua de Mel' },
+    { artist: 'SORRISO MAROTO', category: 'SORRISO MAROTO', title: 'Na Cama' },
+    { artist: 'SORRISO MAROTO', category: 'SORRISO MAROTO', title: 'Na Maldade (part. Anitta)' },
+    { artist: 'SORRISO MAROTO', category: 'SORRISO MAROTO', title: 'O Impossível' },
+    { artist: 'SORRISO MAROTO', category: 'SORRISO MAROTO', title: 'Se Eu Te Pego Eu Te Invergo' },
+    { artist: 'SORRISO MAROTO', category: 'SORRISO MAROTO', title: 'Sinais' },
+    { artist: 'SORRISO MAROTO', category: 'SORRISO MAROTO', title: 'Tá Bom Ahan' },
+    // SOWETO
+    { artist: 'SOWETO', category: 'SOWETO', title: 'Mundo de Oz' },
+    // SPC
+    { artist: 'SPC (SÓ PRA CONTRARIAR)', category: 'SPC (SÓ PRA CONTRARIAR)', title: 'A Minha Fantasia' },
+    { artist: 'SPC (SÓ PRA CONTRARIAR)', category: 'SPC (SÓ PRA CONTRARIAR)', title: 'Essa Tal Liberdade' },
+    { artist: 'SPC (SÓ PRA CONTRARIAR)', category: 'SPC (SÓ PRA CONTRARIAR)', title: 'Mineirinho' },
+    // TDP
+    { artist: 'TDP (TURMA DO PAGODE)', category: 'TDP (TURMA DO PAGODE)', title: 'A Pessoa Certa' },
+    { artist: 'TDP (TURMA DO PAGODE)', category: 'TDP (TURMA DO PAGODE)', title: 'Beija Aqui' },
+    { artist: 'TDP (TURMA DO PAGODE)', category: 'TDP (TURMA DO PAGODE)', title: 'Cobertor de Orelha' },
+    { artist: 'TDP (TURMA DO PAGODE)', category: 'TDP (TURMA DO PAGODE)', title: 'Deixa em Off' },
+    { artist: 'TDP (TURMA DO PAGODE)', category: 'TDP (TURMA DO PAGODE)', title: 'Final Feliz' },
+    { artist: 'TDP (TURMA DO PAGODE)', category: 'TDP (TURMA DO PAGODE)', title: 'Lancinho' },
+    { artist: 'TDP (TURMA DO PAGODE)', category: 'TDP (TURMA DO PAGODE)', title: 'Luz, Câmera, Ação' },
+    { artist: 'TDP (TURMA DO PAGODE)', category: 'TDP (TURMA DO PAGODE)', title: 'Melhor Amigo' },
+    { artist: 'TDP (TURMA DO PAGODE)', category: 'TDP (TURMA DO PAGODE)', title: 'Pente e Rala' },
+    { artist: 'TDP (TURMA DO PAGODE)', category: 'TDP (TURMA DO PAGODE)', title: 'Pesquisa no Google' },
+    { artist: 'TDP (TURMA DO PAGODE)', category: 'TDP (TURMA DO PAGODE)', title: 'Pro Meu Mundo Girar' },
+    { artist: 'TDP (TURMA DO PAGODE)', category: 'TDP (TURMA DO PAGODE)', title: 'Puxa Agarra e Beija' },
+    { artist: 'TDP (TURMA DO PAGODE)', category: 'TDP (TURMA DO PAGODE)', title: 'Se Eu Pudesse' },
+    { artist: 'TDP (TURMA DO PAGODE)', category: 'TDP (TURMA DO PAGODE)', title: 'Sem Você a Vida É Tão Sem Graça' },
+    { artist: 'TDP (TURMA DO PAGODE)', category: 'TDP (TURMA DO PAGODE)', title: 'Sua Mãe Vai Me Amar' },
+    // THIAGUINHO
+    { artist: 'THIAGUINHO', category: 'THIAGUINHO', title: 'A Fila Anda' },
+    { artist: 'THIAGUINHO', category: 'THIAGUINHO', title: 'Buquê de Flores' },
+    { artist: 'THIAGUINHO', category: 'THIAGUINHO', title: 'Cancun' },
+    { artist: 'THIAGUINHO', category: 'THIAGUINHO', title: 'Caraca Muleque' },
+    { artist: 'THIAGUINHO', category: 'THIAGUINHO', title: 'Deixa Tudo Como Tá' },
+    { artist: 'THIAGUINHO', category: 'THIAGUINHO', title: 'Desencana' },
+    { artist: 'THIAGUINHO', category: 'THIAGUINHO', title: 'Domingando' },
+    { artist: 'THIAGUINHO', category: 'THIAGUINHO', title: 'Energia Surreal' },
+    { artist: 'THIAGUINHO', category: 'THIAGUINHO', title: 'Flor de Liz' },
+    { artist: 'THIAGUINHO', category: 'THIAGUINHO', title: 'Hey Mundo' },
+    { artist: 'THIAGUINHO', category: 'THIAGUINHO', title: 'Já Fui de Você' },
+    { artist: 'THIAGUINHO', category: 'THIAGUINHO', title: 'Ousadia e Alegria' },
+    { artist: 'THIAGUINHO', category: 'THIAGUINHO', title: 'Para pra Pensar (part. Mr Dan)' },
+    { artist: 'THIAGUINHO', category: 'THIAGUINHO', title: 'Ponto Fraco' },
+    { artist: 'THIAGUINHO', category: 'THIAGUINHO', title: 'Simples Desejo' },
+    { artist: 'THIAGUINHO', category: 'THIAGUINHO', title: 'Sou o Cara pra Você' },
+    { artist: 'THIAGUINHO', category: 'THIAGUINHO', title: 'Vamo que Vamo' },
+    // TIEE
+    { artist: 'TIEE', category: 'TIEE', title: 'Modo Avião' },
+    // TURMA DO PAGODE
+    { artist: 'TURMA DO PAGODE', category: 'TURMA DO PAGODE', title: 'Puxa Agarra e Beija' },
+    // VITINHO
+    { artist: 'VITINHO', category: 'VITINHO', title: 'Sobrenome' },
+    { artist: 'VITINHO', category: 'VITINHO', title: 'Traição' },
+    // ZECA PAGODINHO
+    { artist: 'ZECA PAGODINHO', category: 'ZECA PAGODINHO', title: 'Ogum' },
   ];
 
   const formattedVsSertanejoSongs = useMemo(() => {
